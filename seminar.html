@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Seminar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            color: #2E4C6D;
+        }
+        .form-container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        input, select, textarea, button {
+            margin: 5px 0;
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #2E8B57;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        .filter-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Form Registrasi Seminar -->
+    <h2>Form Registrasi Seminar / Workshop</h2>
+    <div class="form-container">
+        <form>
+            <label>Nama Lengkap:</label>
+            <input type="text" placeholder="Masukkan Nama Anda" required>
+            
+            <label>Tempat Lahir:</label>
+            <input type="text" placeholder="Tempat Lahir" required>
+
+            <label>Tanggal Lahir:</label>
+            <input type="date" required>
+
+            <label>Gender:</label>
+            <label><input type="radio" name="gender" value="Laki-laki" required> Laki-laki</label>
+            <label><input type="radio" name="gender" value="Perempuan" required> Perempuan</label>
+
+            <label>Email:</label>
+            <input type="email" placeholder="Masukkan Email Anda" required>
+
+            <label>Status Peserta:</label>
+            <select>
+                <option value="">Pilih Status</option>
+                <option value="Mahasiswa">Mahasiswa</option>
+                <option value="Umum">Umum</option>
+            </select>
+
+            <button type="submit">Daftar</button>
+        </form>
+    </div>
+
+    <!-- Form Admin Buat Seminar Baru -->
+    <h2>Form Admin - Buat Seminar Baru</h2>
+    <div class="form-container">
+        <form>
+            <label>Kode Seminar:</label>
+            <input type="text" placeholder="Kode Seminar" required>
+            
+            <label>Nama Seminar:</label>
+            <input type="text" placeholder="Nama Seminar" required>
+
+            <label>Tanggal Mulai:</label>
+            <input type="date" required>
+
+            <label>Tanggal Akhir:</label>
+            <input type="date" required>
+
+            <label>Biaya:</label>
+            <input type="number" placeholder="Masukkan Biaya" required>
+
+            <label>Tempat:</label>
+            <input type="text" placeholder="Tempat Seminar" required>
+
+            <label>Jenis Kegiatan:</label>
+            <select>
+                <option value="">Pilih Jenis</option>
+                <option value="Workshop">Workshop</option>
+                <option value="Seminar">Seminar</option>
+            </select>
+
+            <label>Deskripsi:</label>
+            <textarea rows="4" placeholder="Deskripsi Seminar"></textarea>
+
+            <button type="submit">Simpan</button>
+        </form>
+    </div>
+
+    <!-- Tabel Administrasi Peserta Seminar -->
+    <h2>Administrasi Peserta Seminar</h2>
+    <div class="form-container">
+        <div class="filter-container">
+            <div>
+                <label>Tanggal Daftar:</label>
+                <input type="date">
+            </div>
+            <div>
+                <label>Kategori Peserta:</label>
+                <select>
+                    <option value="">Pilih Kategori</option>
+                    <option value="Mahasiswa">Mahasiswa</option>
+                    <option value="Umum">Umum</option>
+                </select>
+            </div>
+            <div>
+                <label>Status Peserta:</label>
+                <select>
+                    <option value="">Pilih Status</option>
+                    <option value="Booking">Booking</option>
+                    <option value="Lunas">Lunas</option>
+                </select>
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama Peserta</th>
+                    <th>Email</th>
+                    <th>Tanggal Daftar</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Budi Santoso</td>
+                    <td>budi@example.com</td>
+                    <td>12-05-2023</td>
+                    <td>Booking</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Hapus</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Siti Aminah</td>
+                    <td>siti@example.com</td>
+                    <td>14-05-2023</td>
+                    <td>Lunas</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Hapus</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
