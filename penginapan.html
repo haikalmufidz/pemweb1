@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Landing Page</title>
+    <!-- Swiper CSS (Untuk Slider) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        header nav ul li {
+            margin: 0 10px;
+        }
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        #slider img {
+            width: 100%;
+            height: auto;
+        }
+        section {
+            padding: 2rem 0;
+        }
+        h2 {
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .grid-item {
+            background: #f4f4f4;
+            padding: 1.5rem;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table th, table td {
+            padding: 0.8rem;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        form input, form textarea, form button {
+            display: block;
+            width: 100%;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+        }
+        form button {
+            background: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background: #555;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>DIARA HOTEL</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">Tentang Kami</a></li>
+                    <li><a href="#services">Layanan</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Image Slider -->
+    <section id="slider">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="hotel1.jpg" alt="Hotel 1" height="200px"></div>
+                <div class="swiper-slide"><img src="hotel2.jpg" alt="Hotel 2" height="200px"></div>
+                <div class="swiper-slide"><img src="hotel3.jpg" alt="Hotel 3" height="200px"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>Deskripsi Perusahaan</h2>
+             <center><p>Kami adalah Adira Hotel, sebuah perusahaan penyedia layanan jasa hotel dan penginapan yang telah berdiri sejak lama dengan komitmen untuk memberikan pengalaman menginap terbaik kepada pelanggan kami. Berlokasi di berbagai kota strategis di seluruh Indonesia, kami menyediakan fasilitas lengkap dan layanan berkualitas tinggi yang dirancang untuk memenuhi kebutuhan wisatawan, pebisnis, dan keluarga.</p></center>
+        </div>
+    </section>
+
+    <!-- Grid System for Branches -->
+    <section id="branches">
+        <div class="container">
+            <h2>Cabang Kami</h2>
+            <div class="grid">
+                <div class="grid-item"><img src="hotel1.jpg" height="100px"></div>
+                <div class="grid-item"><img src="hotel2.jpg" height="100px"></div>
+                <div class="grid-item"><img src="hotel3.jpg" height="100px"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotion Table -->
+    <section id="promo">
+        <div class="container">
+            <h2>Promo</h2>
+            <table>
+                <tr>
+                    <th>Paket</th>
+                    <th>Harga</th>
+                    <th>Waktu</th>
+                    <th>Syarat & Ketentuan</th>
+                </tr>
+                <tr>
+                    <td>Paket 1</td>
+                    <td>Rp 500.000</td>
+                    <td>3 Hari 2 Malam</td>
+                    <td>Syarat berlaku</td>
+                </tr>
+                <tr>
+                    <td>Paket 2</td>
+                    <td>Rp 700.000</td>
+                    <td>4 Hari 3 Malam</td>
+                    <td>Syarat berlaku</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact">
+        <div class="container">
+            <h2>Hubungi Kami</h2>
+            <form>
+                <input type="text" placeholder="Nama Anda" required>
+                <input type="email" placeholder="Email Anda" required>
+                <textarea placeholder="Pesan Anda" rows="5" required></textarea>
+                <button type="submit">Kirim</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Adira Hotel. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    </script>
+</body>
+</html>
